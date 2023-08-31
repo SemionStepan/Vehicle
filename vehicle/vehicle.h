@@ -7,18 +7,11 @@ using namespace std;
 
 class Vehicle
 {
-public:
-    string* _mark;
+    string _mark;
     int _numberOfCylinders;
-    long _power;
-    Vehicle();
-    Vehicle( string* mark, int numberOfCylinders, long power);
-    Vehicle( string* mark, int numberOfCylinders);
-    Vehicle( string* mark, long power);
-    Vehicle( int numberOfCylinders, long power);
-    Vehicle(string* mark);
-    Vehicle(int numberOfCylinders);
-    Vehicle(long power);
+    int _power;
+public:
+    Vehicle(string mark = "", int numberOfCylinders = 0, int power = 0);
 
     ~Vehicle();
 
@@ -28,31 +21,19 @@ public:
 
 class Truck : public Vehicle
 {
-    short _bodyLoadCapacity;
+    string _mark;
+    int _numberOfCylinders;
+    int _power;
+    int _bodyLoadCapacity;
 public:
-    Truck();
-    Truck( string* mark, int numberOfCylinders, long power, short bodyLoadCapacity);
-    Truck( string* mark, int numberOfCylinders, long power);
-    Truck( string* mark, int numberOfCylinders, short bodyLoadCapacity);
-    Truck( string* mark, long power, short bodyLoadCapacity);
-    Truck( int numberOfCylinders, long power, short bodyLoadCapacity);
-    Truck( string* mark, int numberOfCylinders);
-    Truck( string* mark, long power);
-    Truck( int numberOfCylinders, long power);
-    Truck( string* mark, short bodyLoadCapacity);
-    Truck( int numberOfCylinders, short bodyLoadCapacity);
-    Truck( long power, short bodyLoadCapacity);
-    Truck(string* mark);
-    Truck(int numberOfCylinders);
-    Truck(long power);
-    Truck( short bodyLoadCapacity);
+    Truck( string mark = "", int numberOfCylinders = 0, int power = 0, int bodyLoadCapacity = 0);
 
     ~Truck();
 
     void out();
 
-    string* setMark();
-    short setBodyLoadCapacity();
+    inline string setMark(string str) { return _mark = str; }
+    inline int setBodyLoadCapacity(int capacity) { return _bodyLoadCapacity = capacity; }
 
 };
 

@@ -5,6 +5,14 @@
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Vehicle vehicle("Марка машины", 1000, 10000);
+    vehicle.out();
+    cout<< endl;
+    Truck truck("МАрка грузовика", 10000, 10000, 10000);
+    truck.out();
+    cout<< endl;
+    truck.setMark("AmericanTruck");
+    truck.setBodyLoadCapacity(20000);
+    truck.out();
     return 0;
 }
