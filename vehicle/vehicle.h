@@ -13,8 +13,6 @@ class Vehicle
 public:
     Vehicle(string mark = "", int numberOfCylinders = 0, int power = 0);
 
-    ~Vehicle();
-
     void out();
 
 };
@@ -27,8 +25,6 @@ class Truck : public Vehicle
     int _bodyLoadCapacity;
 public:
     Truck( string mark = "", int numberOfCylinders = 0, int power = 0, int bodyLoadCapacity = 0);
-
-    ~Truck();
 
     void out();
 

@@ -6,11 +6,6 @@ Vehicle::Vehicle(string mark, int numberOfCylinders, int power)
     _power = power;
 }
 
-Vehicle::~Vehicle()
-{
-    std::cout << "Vehicle " << _mark << " deleted" << std::endl;
-}
-
 void Vehicle::out()
 {
     cout<< _mark <<endl;
@@ -24,11 +19,6 @@ Truck::Truck(string mark, int numberOfCylinders, int power, int bodyLoadCapacity
     _numberOfCylinders = numberOfCylinders;
     _power = power;
     _bodyLoadCapacity = bodyLoadCapacity;
-}
-
-Truck::~Truck()
-{
-    std::cout << "Truck " << _mark << " deleted" << std::endl;
 }
 
 void Truck::out()
